@@ -1,0 +1,7 @@
+{
+  "name": "company-users",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
