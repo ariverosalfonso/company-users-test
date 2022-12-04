@@ -1,0 +1,65 @@
+<ion-content class="ion-text-center">
+  <ion-row>
+    <ion-col size="12" sizeMd="8" offsetMd="2" sizeLg="6" offsetLg="3" sizeXl="4" offsetXl="4">
+      <div id="header">
+        <img src="assets/company.png" class="avatar">
+        <h1>Crea tu cuenta</h1>
+      </div>
+      <form id="form" [formGroup]="registerForm">
+        <ion-item>
+          <ion-input placeholder="Correo" formControlName="email"></ion-input>
+        </ion-item>
+        <p *ngIf="!registerForm.get('email')?.valid && registerForm.get('email')?.touched">
+          <ion-text class="error" color="danger">
+            Please, enter your email
+          </ion-text>
+          <ion-text class="error" color="danger" *ngIf="registerForm.get('email')?.hasError('email')">
+            Invalid email
+          </ion-text>
+        </p>
+        <ion-item>
+          <ion-input type="password" placeholder="Contraseña" formControlName="password"></ion-input>
+        </ion-item>
+        <p *ngIf="!registerForm.get('password')?.valid && registerForm.get('password')?.touched">
+          <ion-text class="error" color="danger">
+            Please enter your password
+          </ion-text>
+          <ion-text class="error" color="danger">
+            The password should be minimum 6 characters
+          </ion-text>
+          <ion-text class="error" color="danger">
+            The password should be maximum 200 characters
+          </ion-text>
+        </p>
+        <ion-item>
+          <ion-input type="password" placeholder="Verificar Contraseña" formControlName="password2"></ion-input>
+        </ion-item>
+        <p *ngIf="!registerForm.get('password2')?.valid && registerForm.get('password2')?.touched">
+          <ion-text class="error" color="danger" *ngIf="registerForm.get('password2')?.hasError('required')">
+            Please enter your password
+          </ion-text>
+          <ion-text class="error" color="danger" *ngIf="registerForm.get('password2')?.hasError('minlength')">
+            The password should be minimum 6 characters
+
+          </ion-text>
+          <ion-text class="error" color="danger" *ngIf="registerForm.get('password2')?.hasError('maxlength')">
+            The password should be maximum 200 characters
+          </ion-text>
+        </p>
+        <p
+          *ngIf="registerForm.value.password !== registerForm.value.password2 && registerForm.get('password2')?.touched">
+          <ion-text color="danger">
+            The password are not equal
+          </ion-text>
+        </p>
+        <ion-button color="primary" expand="block" shape="round" (click)="registerUser()">Ok</ion-button>
+      </form>
+    </ion-col>
+  </ion-row>
+
+  <p>Do you have an account? <a routerLink="/login">Sign in</a></p>
+
+  <div class="circle circle-bg"></div>
+  <div class="circle circle-sm"></div>
+  <div class="circle circle-xs"></div>
+</ion-content>

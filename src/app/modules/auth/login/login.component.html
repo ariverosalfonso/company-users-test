@@ -1,0 +1,45 @@
+<ion-content class="ion-text-center">
+  <ion-row>
+    <ion-col size="12" sizeMd="8" offsetMd="2" sizeLg="6" offsetLg="3" sizeXl="4" offsetXl="4">
+      <div id="header">
+        <img src="assets/company.png" class="avatar">
+        <h1>Login</h1>
+      </div>
+      <form id="form" [formGroup]="loginForm">
+        <ion-item>
+          <ion-input placeholder="Email" formControlName="email"></ion-input>
+        </ion-item>
+        <p *ngIf="!loginForm.get('email')?.valid && loginForm.get('email')?.touched">
+          <ion-text class="error" color="danger" *ngIf="loginForm.get('email')?.hasError('required')">
+            Please, enter your email
+          </ion-text>
+          <ion-text class="error" color="danger" *ngIf="loginForm.get('email')?.hasError('email')">
+            Your email is invalid
+          </ion-text>
+        </p>
+        <ion-item>
+          <ion-input type="password" placeholder="Contraseña" formControlName="password"></ion-input>
+        </ion-item>
+        <p *ngIf="!loginForm.get('password')?.valid && loginForm.get('password')?.touched">
+          <ion-text class="error" color="danger" *ngIf="loginForm.get('password')?.hasError('required')">
+            Please enter your password
+          </ion-text>
+          <ion-text class="error" color="danger" *ngIf="loginForm.get('password')?.hasError('minlength')">
+            The password have min 6 characters
+          </ion-text>
+          <ion-text class="error" color="danger" *ngIf="loginForm.get('password')?.hasError('maxlength')">
+            The password have max 200 characters
+          </ion-text>
+        </p>
+        <ion-button color="primary" expand="block" shape="round" (click)="login()">Sign in</ion-button>
+      </form>
+    </ion-col>
+  </ion-row>
+
+  <p>You don't have an account? <a routerLink="/signup">Register</a></p>
+
+  <div class="circle circle-bg"></div>
+  <div class="circle circle-sm"></div>
+  <div class="circle circle-xs"></div>
+
+</ion-content>

@@ -1,0 +1,124 @@
+ion-toolbar {
+    --background: rgb(24, 15, 31);
+
+    ion-button {
+        text-transform: initial;
+        color: ivory;
+    }
+}
+
+ion-content {
+
+    // --background: rgb(255, 255, 255) ;
+    ion-item {
+        border-radius: 50px;
+        height: 55px;
+        box-shadow: 0px 3.5px 4px 1px #47abf3;
+        margin-top: 15px;
+        --highlight-height: .5px;
+
+        ion-input {
+            font-size: 18px;
+            --padding-top: 15px;
+            --padding-bottom: 15px;
+            --padding-start: 5px;
+            --placeholder-color: var(--ion-color-dark);
+            --placeholder-font-weight: bold;
+        }
+
+        a {
+            font-size: 17px;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+        }
+    }
+
+
+
+    #header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+
+        h1 {
+            font-weight: 700;
+            font-size: 35px;
+            color: #1d1920;
+        }
+
+        .avatar {
+            width: 125px;
+            height: 125px;
+            border-radius: 50%;
+        }
+
+        .hueso {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    #form {
+        padding-left: 30px;
+        padding-right: 30px;
+
+        ion-button {
+            margin-top: 35px;
+            height: 48px;
+            font-size: 18px;
+            text-transform: initial;
+            border-radius: 50px;
+            box-shadow: 0px 3.5px 4px 1px var(--ion-color-medium);
+        }
+    }
+
+    p {
+        font-size: 17px;
+        letter-spacing: 0.5px;
+        font-weight: bold;
+
+        a {
+            color: var(--ion-color-primary);
+        }
+    }
+}
+
+// cicles
+.circle {
+    border-radius: 200%;
+    background: var(--ion-color-primary);
+    position: fixed;
+    z-index: -1;
+}
+
+.circle-bg {
+    height: 300px;
+    width: 300px;
+    top: -120px;
+    right: -80px;
+    box-shadow: -4px 5px 7px var(--ion-color-medium);
+}
+
+.circle-md {
+    height: 150px;
+    width: 150px;
+    top: -20px;
+    left: -20px;
+}
+
+.circle-sm {
+    height: 70px;
+    width: 70px;
+    bottom: -20px;
+    left: -20px;
+    box-shadow: 4px 5px 7px var(--ion-color-medium);
+}
+
+.circle-xs {
+    height: 35px;
+    width: 35px;
+    bottom: 30px;
+    left: 40px;
+    box-shadow: 4px 5px 7px var(--ion-color-medium);
+}

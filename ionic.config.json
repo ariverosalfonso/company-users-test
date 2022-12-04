@@ -1,7 +1,8 @@
 {
   "name": "company-users",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }

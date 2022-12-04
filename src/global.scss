@@ -9,18 +9,147 @@
  * https://ionicframework.com/docs/layout/global-stylesheets
  */
 
+
 /* Core CSS required for Ionic components to work properly */
+
 @import "~@ionic/angular/css/core.css";
 
 /* Basic CSS for apps built with Ionic */
+
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
 @import '~@ionic/angular/css/display.css';
 
 /* Optional CSS utils that can be commented out */
+
 @import "~@ionic/angular/css/padding.css";
 @import "~@ionic/angular/css/float-elements.css";
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.toast-success-class {
+    --background: var(--ion-color-success);
+    ;
+    --button-color: #ffffff;
+    --color: #FFFFFF;
+}
+
+.toast-information-class {
+    --background: var(--ion-color-primary);
+    --button-color: #FFFFFF;
+    --color: #FFFFFF;
+}
+
+.toast-warning-class {
+    --background: var(--ion-color-warning);
+    ;
+    --button-color: #FFFFFF;
+    --color: black;
+}
+
+.toast-danger-class {
+    --background: var(--ion-color-danger);
+    ;
+    --button-color: #FFFFFF;
+    --color: #FFFFFF;
+}
+
+.alert-success-class {
+    --button-color: #060606;
+    --color: #ffffff;
+
+    .alert-head.sc-ion-alert-md {
+        background: var(--ion-color-success);
+        ;
+        margin-bottom: 1em;
+    }
+
+    .alert-title.sc-ion-alert-md {
+        color: #ffffff;
+    }
+}
+
+.alert-information-class {
+    --button-color: #060606;
+    --color: #ffffff;
+
+    .alert-head.sc-ion-alert-md {
+        background: var(--ion-color-principal);
+        margin-bottom: 1em;
+    }
+
+    .alert-title.sc-ion-alert-md {
+        color: #ffffff;
+    }
+}
+
+.alert-warning-class {
+    --button-color: #060606;
+    --color: #ffffff;
+
+    .alert-head.sc-ion-alert-md {
+        background: var(--ion-color-warning);
+        ;
+        margin-bottom: 1em;
+    }
+
+    .alert-title.sc-ion-alert-md {
+        color: #ffffff;
+    }
+}
+
+.alert-danger-class {
+    --button-color: #060606;
+    --color: #ffffff;
+
+    .alert-head.sc-ion-alert-md {
+        background: var(--ion-color-danger);
+        ;
+        margin-bottom: 1em;
+    }
+
+    .alert-title.sc-ion-alert-md {
+        color: #ffffff;
+    }
+}
+
+.cal-modal {
+    --height: 80%;
+    --border-radius: 10px;
+    padding: 25px;
+}
+
+.event-detail-container {
+    display: none;
+}
+
+ion-content {
+    // --background: rgb(255, 255, 255) ;
+    --background: url('/assets/backgro.png');
+}
+
+.flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.flex-center {
+    justify-content: center;
+}
+
+.ml-50 {
+    margin-left: 50px;
+}
+
+h1 {
+    color: #060606;
+    font-weight: bold;
+    margin-top: 2%;
+    margin-bottom: 0;
+
+}
